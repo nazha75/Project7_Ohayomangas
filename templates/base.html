@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - OhayoMangas</title>
+    <link rel="stylesheet" href="style.css"/>
+    
+</head>
+<body>
+    <nav>
+<!-- La fonction url_for() permet de créer un lien vers d'autres fonctions -->
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('create') }}">Create</a>
+        <a href="#">Delete</a>
+        <a href="#">Update</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
